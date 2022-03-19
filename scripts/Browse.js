@@ -3,7 +3,7 @@
    document.querySelector("#footer").innerHTML = footer();
    var page = 1;
    var size = 10;
-   var url = "/games?page="+page+"&size= "+size+"";
+   var url = "https://epic-backend-web.herokuapp.com/games?page="+page+"&size= "+size+"";
     var data;
    var res = apiCall(url);
    res.then((res) => {
@@ -24,7 +24,7 @@
            //console.log(selected)
         page = page+1;
         //console.log(selected);
-        let url = "http://localhost:3000/games?page="+page+"&size="+size+"";
+        let url = "https://epic-backend-web.herokuapp.com/games?page="+page+"&size="+size+"";
     
         let res = apiCall(url);
         res.then((res) => {
@@ -43,7 +43,7 @@
         page = page-1;
         console.log(page)
         //console.log(selected);
-        let url = "http://localhost:3000/games?page="+page+"&size="+size+"";
+        let url = "https://epic-backend-web.herokuapp.com/games?page="+page+"&size="+size+"";
 
         let res = apiCall(url);
         res.then((res) => {
@@ -155,7 +155,7 @@
 
         if (event.key === "Enter"){
             console.log(input)
-            let url = "http://localhost:3000/games?title="+input+"&page="+page+"&size="+size+"";
+            let url = "https://epic-backend-web.herokuapp.com/games?title="+input+"&page="+page+"&size="+size+"";
 
        let res = apiCall(url);
        //console.log(res)
@@ -185,7 +185,7 @@
 
         if (event.key === "Enter"){
             console.log(input)
-            let url = "http://localhost:3000/games?genre="+input+"&page="+page+"&size="+size+"";
+            let url = "https://epic-backend-web.herokuapp.com/games?genre="+input+"&page="+page+"&size="+size+"";
 
        let res = apiCall(url);
        res.then((res) => {
@@ -253,7 +253,7 @@
    function sortByGenre(){
        let selected = document.querySelector("#genre").value;
        //console.log(selected);
-       let url = "http://localhost:3000/games?genre="+selected+"&page="+page+"&size="+size+"";
+       let url = "https://epic-backend-web.herokuapp.com/games?genre="+selected+"&page="+page+"&size="+size+"";
 
        let res = apiCall(url);
        res.then((res) => {
@@ -269,7 +269,7 @@
 
    function sortByplatform(){
     let selected = document.querySelector("#platform").value;
-    let url = "http://localhost:3000/games?platform="+selected+"&page="+page+"&size="+size+"";
+    let url = "https://epic-backend-web.herokuapp.com/games?platform="+selected+"&page="+page+"&size="+size+"";
 
        let res = apiCall(url);
        res.then((res) => {

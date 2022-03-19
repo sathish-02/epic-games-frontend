@@ -153,7 +153,7 @@ async function apiCall() {
 
   try {
 
-    const response = await fetch(`http://localhost:3000/games`);
+    const response = await fetch(`https://epic-backend-web.herokuapp.com/games`);
     const data = await response.json();
 
     // console.log(data)

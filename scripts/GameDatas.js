@@ -6,7 +6,7 @@ var genre = JSON.parse(localStorage.getItem("genreData"));
 console.log(genre.title);
 var page = 1;
 var size = 10;
-var url = `http://localhost:3000/games?genre=${genre.title}&page=${page}&size=${size}`;
+var url = `https://epic-backend-web.herokuapp.com/games?genre=${genre.title}&page=${page}&size=${size}`;
 var data;
 var res = apiCall(url);
 res.then((res) => {
@@ -133,7 +133,7 @@ function getData(event) {
 
     if (event.key === "Enter") {
         console.log(input)
-        let url = "http://localhost:3000/games?genre=" + input +"&page="+page+"&size="+size+"";
+        let url = "https://epic-backend-web.herokuapp.com/games?genre=" + input +"&page="+page+"&size="+size+"";
 
         let res = apiCall(url);
         res.then((res) => {
@@ -201,7 +201,7 @@ document.querySelector("#platform").addEventListener("change", sortByplatform);
 
 function sortByplatform() {
     let selected = document.querySelector("#platform").value;
-    let url = "http://localhost:3000/games?platform=" + selected + "&page="+page+"&size="+size+"";
+    let url = "https://epic-backend-web.herokuapp.com/games?platform=" + selected + "&page="+page+"&size="+size+"";
 
     let res = apiCall(url);
     res.then((res) => {

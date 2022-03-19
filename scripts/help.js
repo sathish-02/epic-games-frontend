@@ -2,7 +2,7 @@ import apiCall from './fetch.js';
 import { footer } from "../components/navFooter.js";
 
 document.querySelector("#footer").innerHTML = footer();
-var url = "http://localhost:3000/games"
+var url = "https://epic-backend-web.herokuapp.com/games"
 var data;
 var res = apiCall(url);
 res.then((res) => {
@@ -61,14 +61,14 @@ function searchForHelp(value) {
 
     //fetching the data
     console.log(value)
-    apiCall(`http://localhost:3000/help?q=${value}`)
+    apiCall(`https://epic-backend-web.herokuapp.com/help?q=${value}`)
         .then((res) => {
             console.log('res:', res);
             if (res.length !== 0) {
                 displayHelp(res);
             }
             else {
-                apiCall(`http://localhost:3000/help`)
+                apiCall(`https://epic-backend-web.herokuapp.com/help`)
                     .then((response) => {
                         console.log('response:', response)
                         var responses = response;

@@ -299,7 +299,7 @@ games.map((el) => {
             title,
         }
         localStorage.setItem("genreData", JSON.stringify(genre));
-        window.location.href = "GameDatas.html";
+        window.location.href = "../pages/GameDatas.html";
     })
     var div1 = document.createElement("div");
     div1.setAttribute("class", "ImgTag");

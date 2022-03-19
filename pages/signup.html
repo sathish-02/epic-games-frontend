@@ -286,7 +286,7 @@
         registered_data = JSON.stringify(registered_data);
         console.log(registered_data)
 
-        var response = await fetch("http://localhost:3000/register", {
+        var response = await fetch("https://epic-backend-web.herokuapp.com/register", {
             method: "POST",
             body: registered_data,
             headers: {
